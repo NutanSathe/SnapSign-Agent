@@ -9,7 +9,7 @@
 
 ## 🖼️ Project Preview
 <p align="center">
-  <img src="your-image.png" width="650">
+  <img src="Hello in Sign Language.png" width="650">
 </p>
 
 ---
