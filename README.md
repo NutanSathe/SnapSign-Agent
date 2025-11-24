@@ -2,6 +2,10 @@
 A lightweight multi-agent system that converts short spoken or typed text into simple sign-language visuals for deaf and hard-of-hearing users.
 
 ---
+<p align="center">
+  <img src="Hello in Sign Language.png" alt="SnapSign Agent Overview" width="600">
+</p>
+
 
 ## 📘 Introduction
 
