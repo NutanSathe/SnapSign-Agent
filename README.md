@@ -1,39 +1,45 @@
 <h1 align="center">🤟 SnapSign Agent</h1>
 
 <p align="center">
-  AI-powered tool that converts speech or text into basic sign-language visuals.<br>
-  Built for better accessibility and inclusion.
+  <b>AI-powered real-time Speech-to-Sign Language Converter</b><br>
+  Making digital communication more inclusive for the deaf & hard-of-hearing community.
 </p>
 
 ---
 
 ## 🖼️ Project Preview
+
+<!-- Replace 'project.png' with your uploaded image name -->
 <p align="center">
   <img src="Hello in Sign Language.png" width="650">
 </p>
 
 ---
 
-## ✨ Overview
+## ⭐ About SnapSign Agent
 
-SnapSign Agent is a lightweight accessibility tool that:
-- Takes speech or text as input  
-- Detects the main keyword  
-- Shows a sign-language image related to that word  
+SnapSign Agent is an AI tool that **listens to speech**, **understands text**, and **converts key words into sign-language visuals**.
 
-Simple, fast, and helpful for deaf or hard-of-hearing users.
+This project is part of an accessibility initiative inspired by the **Innovation for Inclusion** concept.
 
 ---
 
-## 🔧 Features
+## 🚀 Features
 
-- 🎙️ Speech to Text  
-- 🧠 Keyword Extraction  
-- 🤟 Sign-Language Mapping  
-- ⚡ Fast and Lightweight  
-- 🧩 Agent-based modular system  
+### 🔊 **Speech Recognition**
+- Converts voice into text using AI models.
+  
+### 🧠 **Intelligent Text Understanding**
+- Detects keywords that can be mapped to sign-language symbols.
+
+### 🤟 **Sign Language Output**
+- Displays clear and simple sign images for easy understanding.
+
+### 🌐 **Lightweight & Accessible**
+- Works on laptop browser.
+- Simple UI, beginner-friendly, and fast.
 
 ---
 
-## 🧩 Architecture
+## 🧩 System Architecture
 
