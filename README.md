@@ -1,143 +1,166 @@
-<div align="center">
-
-# 🧏‍♀️ SnapSign Agent  
-### **AI-Powered Browser Extension for Automatic Sign Language Support**
-
-<img src="A_flat-style_digital_illustration_infographic_is_d.png" width="600"/>
-
-</div>
+# 🧩 SnapSign Agent  
+A lightweight multi-agent system that converts short spoken or typed text into simple sign-language visuals for deaf and hard-of-hearing users.
 
 ---
 
-## 📌 About the Project  
+## 📘 Introduction
 
-People with hearing disabilities often face difficulty understanding online video content.  
-**SnapSign Agent** solves this problem by providing **real-time sign language translation** for any video on the web.
+Access to information is something most of us take for granted, but for people who are deaf or hard of hearing, digital content can be difficult to understand. Most videos, tutorials, and apps do not offer sign-language support. Professional translation is slow and expensive, which makes daily communication harder.
 
-This is built for the **Infosys Springboard Women’s Hackathon – Innovation for Inclusion**.
-
----
-
-## 🚀 Features  
-
-- 🎥 **Real-time video-to-text extraction**  
-- ✋ **AI-powered sign language conversion**  
-- 🧩 **Chrome browser extension**  
-- ⚡ Fast performance using JavaScript + Python backend  
-- 🔄 Supports YouTube, Vimeo, embedded videos  
-- 🌐 Works on most websites without extra setup  
+**SnapSign Agent** is a simple multi-agent tool that converts short phrases into basic sign-language images.  
+It is not a full translator—its purpose is to help users quickly understand the *main idea* of short messages using a lightweight, modular pipeline.
 
 ---
 
-## 🛠️ Tech Stack  
+## 🎯 Problem Statement
 
-### **Frontend**
-- HTML5  
-- CSS3  
-- JavaScript  
+Many hearing-impaired users struggle with audio-based content. Captions are not always available or accurate, especially in regional languages, and creating videos for every sign is unrealistic.
 
-### **Backend**
-- Python (Flask / FastAPI)  
-- Node.js (for extension scripts)
+**Core Problem:**  
+➡️ How can we provide quick, automatic sign-language assistance for simple daily communication?
 
-### **AI / ML**
-- MediaPipe  
-- OpenCV  
-- Deep Learning Models  
-
-### **Tools**
-- VS Code  
-- GitHub  
-- Chrome Extensions API  
+Instead of full sentence translation, this project extracts the **key word** and shows its sign-language visual instantly. This solves a small but meaningful accessibility challenge.
 
 ---
 
-## 📁 Project Structure  
+## 🤖 Why I Used Agents
 
-```
-SnapSign-Agent/
-│
-├── extension/
-│   ├── popup.html
-│   ├── popup.js
-│   ├── styles.css
-│   └── manifest.json
-│
-├── backend/
-│   ├── app.py
-│   ├── model/
-│   └── utils/
-│
-├── assets/
-│   ├── logo.png
-│   └── demo.png
-│
-└── README.md
-```
+Agents make the work simpler by breaking the task into small, manageable parts.
+
+### Benefits of Using Agents
+- Clear separation of responsibilities  
+- Easy chaining of tasks  
+- Ability to upgrade individual modules later  
+- Clean and testable design  
+- Lightweight, modular, and extendable
 
 ---
 
-## 🧪 How It Works  
+## 🏗️ SnapSign Agent Architecture
 
-1. The browser extension detects the video.  
-2. It extracts frames and sends them to the backend.  
-3. The backend model detects sign language patterns.  
-4. The model converts them to **text or gesture animations**.  
-5. Users get instant sign language support on any website.
+The system uses a **sequential multi-agent pipeline** with four main agents:
 
----
+### 1️⃣ Input Agent
+- Accepts text from user or speech-to-text output  
+- Normalizes and cleans the input  
 
-## ▶️ Installation  
+### 2️⃣ Keyword Agent
+- Extracts the most meaningful word  
+- Examples:
+  - “hello there” → **hello**
+  - “please help me” → **help**
+  - “thank you so much” → **thank you**
 
-### **1. Clone the repository**
-```
-git clone https://github.com/YOUR-USERNAME/SnapSign-Agent.git
-```
+### 3️⃣ Sign Agent
+- Maps keywords to static sign-language images  
+- Simple and lightweight (no animation generation)
 
-### **2. Load the Chrome Extension**
-
-1. Open Chrome → `chrome://extensions`
-2. Turn ON **Developer Mode**
-3. Click **Load Unpacked**
-4. Select the **extension/** folder  
-
-### **3. Run Backend**
-```
-python app.py
-```
+### 4️⃣ Display Agent
+- Shows the final sign image  
+- Handles fallback when a keyword is unknown
 
 ---
 
-## 📸 Demo Screenshots  
-(Add your screenshots here)
+## 🔄 How the System Works (Step-by-Step)
 
-```
-![Demo](assets/demo.png)
-![UI](assets/ui.png)
-```
+1. User enters a phrase  
+2. Input Agent cleans the text  
+3. Keyword Agent detects the main concept  
+4. Sign Agent fetches the image  
+5. Display Agent shows the visual output  
 
----
-
-## 🤝 Team Members  
-- **Nutan Sathe** – AI / Web Developer  
-- **Your Friend Name** – Backend Developer  
-- **Your Friend Name** – UI/UX  
+Fast, simple, and effective for short expressions.
 
 ---
 
-## 🏆 Hackathon Submission  
-This project was created for the  
-**Infosys Springboard Women's Hackathon – Innovation for Inclusion**.
+## 🎥 Demo Summary
+
+Example flow shown in demo:
+
+1. User types **“hello there”**  
+2. Pipeline runs  
+3. Keyword “hello” is detected  
+4. Corresponding sign image appears  
+5. Display Agent outputs it cleanly  
+
+Shows the end-to-end working of the agent system.
 
 ---
 
-## ⭐ Support  
-If you like this project, please ⭐ this repository.  
-Your support motivates us to build more inclusive technology!
+## 🛠️ Technical Implementation
+
+This project uses concepts from the Agent Development Kit (ADK):
+
+### ✔ Multi-Agent Pipeline  
+Sequential and modular design.
+
+### ✔ LLM-Powered Agent  
+Keyword extraction uses the **Gemini model**, fulfilling the LLM requirement.
+
+### ✔ Custom Tool  
+A keyword-to-image mapping tool for sign-language visuals.
+
+### ✔ Context Engineering  
+Each agent receives only the necessary information to keep the system fast.
+
+### ✔ Logging & Tracing  
+Added to understand flow and catch issues during testing.
+
+### ✔ GitHub Repository  
+Includes agents, tools, images, and demo.
 
 ---
 
-<div align="center">
+## 🛠️ Tools and Technologies Used
 
-### Made with ❤️ in India  
-</div>
+- **Python (ADK)**
+- **Gemini LLM** (for keyword extraction)
+- **Sequential Multi-Agent System**
+- **Static Sign-Language Image Dataset**
+- **GitHub** (code hosting)
+- **Small UI for demo only**
+
+---
+
+## ⚠️ Challenges Faced
+
+- Choosing static images vs. generated signs  
+- Designing a simple but complete agent pipeline  
+- Creating a clear demo  
+- Limited time for expanding features  
+- Learning multi-agent structuring  
+
+Even with constraints, the system successfully delivers a helpful accessibility tool.
+
+---
+
+## 🚀 Future Improvements
+
+With more time, I would add:
+
+- Larger sign-language image library  
+- Full-sentence support  
+- Regional sign-language variations  
+- Camera-based gesture recognition  
+- YouTube browser extension  
+- Better UI design  
+- Speech-to-text integrated inside agents  
+- Deployment using Agent Engine / Cloud Run  
+- Smarter fallback for unknown keywords  
+
+---
+
+## 🏁 Conclusion
+
+SnapSign Agent is a lightweight and practical accessibility project using a multi-agent architecture.  
+It shows how simple agent workflows, LLM-powered modules, and custom tools can make digital communication more inclusive for deaf and hard-of-hearing users.
+
+This project helped me understand:
+
+- how to design multi-agent systems  
+- how to integrate an LLM sub-agent  
+- how to build clean pipelines  
+- how to use tools and context effectively  
+
+It is a small but meaningful step toward making digital content more accessible.
+
